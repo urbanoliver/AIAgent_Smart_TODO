@@ -9,5 +9,7 @@ namespace SmartTodo.Api
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
         public string? Summary { get; set; }
+
+        // The following code is added to demonstrate the use of C# 12 features, such as primary constructors and file-scoped namespaces.
     }
 }
