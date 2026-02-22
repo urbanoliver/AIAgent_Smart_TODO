@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { TodoListComponent } from './components/todo-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
+  standalone: true,
+  imports: [TodoListComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `<app-todo-list></app-todo-list>`,
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('smart-todo-ui');
-}
+export class App {}
+
