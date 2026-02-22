@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartTodo.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7211de024299bd9f348c8fe9547f3b2551caaef6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c57ce8aee95ed72bc5d4cc61d3f05a2fdb5731c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartTodo.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartTodo.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
