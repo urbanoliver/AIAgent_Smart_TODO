@@ -25,7 +25,6 @@ import { TodoApiService } from '../services/todo-api.service';
             type="text"
             formControlName="title"
             placeholder="Enter todo title"
-            [disabled]="isSubmitting()"
           />
           @if (form.get('title')?.invalid && form.get('title')?.touched) {
             <span class="error">Title is required</span>
@@ -39,7 +38,6 @@ import { TodoApiService } from '../services/todo-api.service';
             formControlName="description"
             placeholder="Enter todo description"
             rows="4"
-            [disabled]="isSubmitting()"
           ></textarea>
         </div>
 
@@ -48,7 +46,6 @@ import { TodoApiService } from '../services/todo-api.service';
           <select
             id="priority"
             formControlName="priority"
-            [disabled]="isSubmitting()"
           >
             <option value="">Select priority</option>
             <option value="LOW">Low</option>
@@ -63,7 +60,6 @@ import { TodoApiService } from '../services/todo-api.service';
             id="dueDate"
             type="date"
             formControlName="dueDate"
-            [disabled]="isSubmitting()"
           />
         </div>
 
@@ -73,7 +69,6 @@ import { TodoApiService } from '../services/todo-api.service';
             <select
               id="status"
               formControlName="status"
-              [disabled]="isSubmitting()"
             >
               <option value="OPEN">Open</option>
               <option value="IN_PROGRESS">In Progress</option>
@@ -247,6 +242,7 @@ export class TodoFormComponent {
 
     this.isSubmitting.set(true);
     this.errorMessage.set('');
+    this.form.disable();
 
     const formValue = this.form.value;
     const payload = {
@@ -268,6 +264,7 @@ export class TodoFormComponent {
         this.formSubmitted.emit(todo);
       },
       error: (error) => {
+        this.form.enable();
         this.isSubmitting.set(false);
         this.errorMessage.set(error.error?.message || 'An error occurred');
       },

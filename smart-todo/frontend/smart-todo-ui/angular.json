@@ -59,7 +59,8 @@
               "buildTarget": "smart-todo-ui:build:production"
             },
             "development": {
-              "buildTarget": "smart-todo-ui:build:development"
+              "buildTarget": "smart-todo-ui:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
