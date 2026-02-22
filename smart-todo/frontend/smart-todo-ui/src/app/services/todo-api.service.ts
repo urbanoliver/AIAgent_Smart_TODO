@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TodoApiService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = '/todos'; // Adjust if backend is on different port
+  private readonly apiUrl = '/api/todos'; // Adjust if backend is on different port
 
   /**
    * Fetch all todos
